@@ -1,93 +1,75 @@
-// styles/theme.js
-// Centralized styling configuration for BuildNext website
-// Change colors and styles here to update across all pages
-
 export const theme = {
-  // Color Palette
   colors: {
-    // Background colors
     bg: {
-      primary: 'bg-slate-900',         // Main background
-      secondary: 'bg-slate-800/50',    // Semi-transparent cards
-      tertiary: 'bg-slate-700/50',     // Semi-transparent inputs
+      primary: 'bg-slate-950',
+      secondary: 'bg-slate-900/60',
+      tertiary: 'bg-slate-800/50',
+      glow: 'bg-gradient-to-br from-indigo-500/10 via-cyan-500/10 to-violet-500/10',
     },
-    // Text colors
     text: {
       primary: 'text-white',
-      secondary: 'text-slate-400',
-      tertiary: 'text-slate-300',
+      secondary: 'text-slate-300',
+      tertiary: 'text-slate-400',
       muted: 'text-slate-500',
+      gradient:
+        'bg-gradient-to-r from-indigo-400 via-cyan-400 to-violet-400 bg-clip-text text-transparent',
     },
-    // Border colors
     border: {
-      primary: 'border-slate-700/50',
-      secondary: 'border-slate-600/50',
-      hover: 'border-slate-500/50',
+      primary: 'border-slate-800/60',
+      hover: 'border-indigo-500/40',
     },
-    // Accent colors (for highlights, icons, etc.)
     accent: {
-      primary: 'text-slate-400',
-      secondary: 'bg-slate-700/50',
+      primary: 'text-cyan-400',
     },
   },
 
-  // Button Styles
   buttons: {
-    primary: 'bg-slate-700 hover:bg-slate-600 text-white',
-    secondary: 'bg-slate-800/80 hover:bg-slate-700/80 text-white border border-slate-600/50',
-    outline: 'bg-slate-800/50 hover:bg-slate-700/50 border border-slate-600/50',
+    primary:
+      'bg-gradient-to-r from-indigo-500 to-cyan-500 hover:from-indigo-400 hover:to-cyan-400 text-white shadow-lg shadow-indigo-500/20',
+    secondary:
+      'bg-slate-900/60 hover:bg-slate-800/60 border border-slate-700/60',
   },
 
-  // Component Styles
   components: {
-    // Navigation
     nav: {
-      container: 'border-b border-slate-700/30 bg-slate-900/80 backdrop-blur-md',
-      link: 'text-slate-400 hover:text-slate-200 transition',
-      linkActive: 'text-white hover:text-slate-200 transition',
+      container:
+        'sticky top-0 z-50 bg-slate-950/70 backdrop-blur-xl border-b border-slate-800/40',
+      link: 'text-slate-400 hover:text-white',
+      linkActive: 'text-white',
     },
-    
-    // Cards - with subtle backdrop blur
+
     card: {
-      primary: 'bg-slate-800/30 backdrop-blur-sm border border-slate-700/30 rounded-2xl hover:border-slate-600/40 transition',
-      secondary: 'bg-slate-800/30 backdrop-blur-sm border border-slate-700/30 rounded-xl hover:border-slate-600/40 transition',
+      primary:
+        'relative bg-slate-900/50 backdrop-blur-xl border border-slate-800/60 rounded-2xl hover:-translate-y-1 hover:shadow-xl hover:shadow-indigo-500/10',
+      secondary:
+        'bg-slate-900/40 backdrop-blur-lg border border-slate-800/50 rounded-xl',
     },
-    
-    // Form inputs
-    input: {
-      base: 'w-full px-4 py-3 bg-slate-800/50 border border-slate-600/50 rounded-lg text-white placeholder-slate-500 focus:outline-none focus:border-slate-500/70 focus:bg-slate-800/70 transition',
-      label: 'block text-white font-semibold mb-2',
-    },
-    
-    // Icons
+
     icon: {
-      container: 'bg-slate-700/40 backdrop-blur-sm rounded-xl flex items-center justify-center',
-      color: 'text-slate-300',
+      container:
+        'bg-gradient-to-br from-indigo-500/20 to-cyan-500/20 rounded-xl flex items-center justify-center',
+      color: 'text-cyan-300',
     },
-    
-    // Footer
+
     footer: {
-      container: 'border-t border-slate-700/30',
+      container: 'border-t border-slate-800/60',
       text: 'text-slate-500',
-      link: 'hover:text-slate-300 transition',
+      link: 'hover:text-slate-300',
     },
   },
 
-  // Typography
   typography: {
-    h1: 'text-5xl md:text-7xl font-bold text-white',
-    h2: 'text-4xl font-bold text-white',
-    h3: 'text-2xl font-bold text-white',
-    body: 'text-xl text-slate-300',
+    h1: 'text-5xl md:text-7xl font-extrabold tracking-tight',
+    h2: 'text-4xl font-bold',
+    h3: 'text-2xl font-semibold',
+    body: 'text-lg text-slate-300',
     bodyLarge: 'text-xl md:text-2xl text-slate-300',
   },
 
-  // Spacing
   spacing: {
-    section: 'py-16 md:py-24',
     container: 'max-w-7xl mx-auto px-6',
+    section: 'py-24',
   },
 };
 
-// Helper function to combine theme classes
 export const cn = (...classes) => classes.filter(Boolean).join(' ');
