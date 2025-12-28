@@ -56,6 +56,11 @@ export const theme = {
       text: 'text-slate-500',
       link: 'hover:text-slate-300',
     },
+
+    input: {
+      label: 'block text-sm font-medium text-slate-300 mb-2',
+      base: 'w-full rounded-lg bg-slate-900/60 border border-slate-700 px-4 py-3 text-slate-100 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-cyan-500',
+    },
   },
 
   typography: {
