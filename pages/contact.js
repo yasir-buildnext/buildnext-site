@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import { Mail, MessageSquare, Send } from 'lucide-react';
 import { theme, cn } from '../styles/theme.js';
+import Link from 'next/link';
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -50,12 +51,23 @@ export default function Contact() {
   };
 
   return (
-    <div className={cn('min-h-screen', theme.colors.bg.primary)}>
+    <div className="relative min-h-screen overflow-hidden">
+
+      {/* ===== SAME BACKGROUND AS HOME ===== */}
+      <div className="absolute inset-0 -z-20 bg-gradient-to-br from-slate-900 via-slate-900 to-slate-800" />
+      <div className="pointer-events-none absolute inset-0 -z-10">
+        <div className="absolute top-[-20%] left-[-10%] w-[600px] h-[600px] rounded-full bg-blue-500/25 blur-[140px]" />
+        <div className="absolute top-[10%] right-[-10%] w-[500px] h-[500px] rounded-full bg-cyan-400/25 blur-[140px]" />
+        <div className="absolute bottom-[-25%] left-[25%] w-[700px] h-[700px] rounded-full bg-purple-500/20 blur-[160px]" />
+      </div>
+
       {/* Navigation */}
       <nav className={theme.components.nav.container}>
         <div className={theme.spacing.container}>
           <div className="py-4 flex justify-between items-center">
-            <div className={cn('text-2xl font-bold', theme.colors.text.primary)}>BuildNext</div>
+            <Link href="/" className={cn('text-2xl font-bold cursor-pointer', theme.colors.text.primary)}>
+              BuildNext
+            </Link>
             <div className="flex gap-8">
               <a href="/" className={theme.components.nav.link}>Home</a>
               <a href="/services" className={theme.components.nav.link}>Services</a>

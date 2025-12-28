@@ -5,6 +5,7 @@ import { theme, cn } from '../styles/theme';
 import { fadeUp, fadeInLeft } from '../lib/motion';
 import ImageCompareSlider from '../components/ImageCompareSlider';
 import Footer from '../components/Footer';
+import Link from 'next/link';
 
 const stagger = {
   hidden: {},
@@ -37,9 +38,9 @@ export default function Home() {
       <nav className={theme.components.nav.container}>
         <div className={theme.spacing.container}>
           <div className="py-4 flex justify-between items-center">
-            <div className={cn('text-2xl font-bold', theme.colors.text.primary)}>
+            <Link href="/" className={cn('text-2xl font-bold cursor-pointer', theme.colors.text.primary)}>
               BuildNext
-            </div>
+            </Link>
             <div className="flex gap-8">
               <a href="/" className={theme.components.nav.linkActive}>Home</a>
               <a href="/services" className={theme.components.nav.link}>Services</a>
