@@ -14,25 +14,33 @@ export default function Contact() {
   const [submitted, setSubmitted] = useState(false);
 
   const handleSubmit = async (e) => {
-    e.preventDefault();
-    
-    try {
-      const response = await fetch('https://formspree.io/f/xdoqnlzn', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(formData)
-      });
+  e.preventDefault();
 
-      if (response.ok) {
-        setSubmitted(true);
-        setFormData({ name: '', email: '', company: '', service: 'general', message: '' });
-      }
-    } catch (error) {
-      console.error('Error submitting form:', error);
+  try {
+    const res = await fetch('/api/contact', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(formData),
+    });
+
+    if (!res.ok) {
+      throw new Error('Failed to send');
     }
-  };
+
+    setSubmitted(true);
+    setFormData({
+      name: '',
+      email: '',
+      company: '',
+      service: 'general',
+      message: '',
+    });
+  } catch (err) {
+    console.error(err);
+    alert('Failed to send message. Please try again.');
+  }
+};
+
 
   const handleChange = (e) => {
     setFormData({
@@ -216,7 +224,7 @@ export default function Contact() {
                   </li>
                   <li className="flex items-start gap-3">
                     <div className={cn('w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0 mt-1', theme.colors.bg.tertiary)}>
-                      <span className={cn('text-sm font-bold', theme.colors.text.secondary)}>1</span>
+                      <span className={cn('text-sm font-bold', theme.colors.text.secondary)}>2</span>
                     </div>
                     <span>Schedule a discovery call to discuss your needs</span>
                   </li>

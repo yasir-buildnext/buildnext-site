@@ -29,7 +29,7 @@ export default function About() {
               About <span className={theme.colors.text.secondary}>BuildNext</span>
             </h1>
             <p className={cn(theme.typography.body, 'leading-relaxed')}>
-              We're a team of committed, high-performing software engineers transforming how businesses build digital products.
+              We're a team of committed, high-performing software developers transforming how businesses build digital products.
             </p>
           </div>
 
