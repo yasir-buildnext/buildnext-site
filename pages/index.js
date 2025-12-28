@@ -199,6 +199,94 @@ export default function Home() {
           />
         </div>
       </section>
+
+
+      
+      {/* TESTIMONIALS */}
+<section className={theme.spacing.container}>
+  <div className="py-24">
+    <h2 className={cn(theme.typography.h2, 'text-center mb-16')}>
+      What Our Clients Say
+    </h2>
+
+    <div className="grid md:grid-cols-2 gap-10 max-w-6xl mx-auto">
+      {/* Testimonial 1 */}
+      <div className={cn(theme.components.card.primary, 'p-10')}>
+        <div className="flex gap-1 mb-6 text-yellow-400">
+          {'★★★★★'.split('').map((s, i) => (
+            <span key={i}>{s}</span>
+          ))}
+        </div>
+
+        <p className="text-lg text-slate-200 leading-relaxed mb-8">
+          “BuildNext delivered our entire AI product end-to-end.
+          Their speed, quality, and communication were unmatched.”
+        </p>
+
+        <div className="flex items-center gap-4">
+          <div className="w-12 h-12 rounded-full bg-gradient-to-br from-cyan-400 to-blue-500" />
+          <div>
+            <div className="font-semibold text-white">Kevin Moore</div>
+            <div className="text-sm text-slate-400">
+              Founder @ Angel Beta
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Testimonial 2 */}
+      <div className={cn(theme.components.card.primary, 'p-10')}>
+        <div className="flex gap-1 mb-6 text-yellow-400">
+          {'★★★★★'.split('').map((s, i) => (
+            <span key={i}>{s}</span>
+          ))}
+        </div>
+
+        <p className="text-lg text-slate-200 leading-relaxed mb-8">
+          “We completely overhauled our website and internal tools with BuildNext.
+          They feel like an extension of our own team.”
+        </p>
+
+        <div className="flex items-center gap-4">
+          <div className="w-12 h-12 rounded-full bg-gradient-to-br from-pink-400 to-purple-500" />
+          <div>
+            <div className="font-semibold text-white">
+              Minlopro Executive Team
+            </div>
+            <div className="text-sm text-slate-400">
+              Technology Company
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{/* CTA */}
+<section className={theme.spacing.container}>
+  <div className="py-24">
+    <div className="max-w-6xl mx-auto rounded-3xl bg-gradient-to-r from-blue-600 to-cyan-500 p-16 text-center">
+      <h2 className="text-4xl font-bold text-white mb-6">
+        Ready to Build Something Amazing?
+      </h2>
+
+      <p className="text-lg text-white/90 max-w-2xl mx-auto mb-10">
+        Let’s discuss your project and how BuildNext can accelerate your
+        development timeline.
+      </p>
+
+      <a
+        href="/contact"
+        className="inline-flex items-center gap-3 bg-white text-blue-600
+                   px-8 py-4 rounded-xl font-semibold text-lg hover:opacity-90"
+      >
+        Contact Us Today →
+      </a>
+    </div>
+  </div>
+</section>
+
       <Footer />
 
     </div>
