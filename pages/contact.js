@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import { Mail, MessageSquare, Send } from 'lucide-react';
 import { theme, cn } from '../styles/theme.js';
 import Link from 'next/link';
+import Navbar from '../components/Navbar';
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -61,22 +62,8 @@ export default function Contact() {
         <div className="absolute bottom-[-25%] left-[25%] w-[700px] h-[700px] rounded-full bg-purple-500/20 blur-[160px]" />
       </div>
 
-      {/* Navigation */}
-      <nav className={theme.components.nav.container}>
-        <div className={theme.spacing.container}>
-          <div className="py-4 flex justify-between items-center">
-            <Link href="/" className={cn('text-2xl font-bold cursor-pointer', theme.colors.text.primary)}>
-              BuildNext
-            </Link>
-            <div className="flex gap-8">
-              <a href="/" className={theme.components.nav.link}>Home</a>
-              <a href="/services" className={theme.components.nav.link}>Services</a>
-              <a href="/about" className={theme.components.nav.link}>About</a>
-              <a href="/contact" className={theme.components.nav.linkActive}>Contact</a>
-            </div>
-          </div>
-        </div>
-      </nav>
+      {/* ===== NAV ===== */}
+      <Navbar />
 
       {/* Hero Section */}
       <section className={theme.spacing.container}>
@@ -206,6 +193,7 @@ export default function Contact() {
 
             {/* Contact Info & Additional Details */}
             <div className="space-y-8">
+              {/* Email directly feature: Currently disabled till we can get a sales@buildnext.org or similar email address secured
               <div className={cn(theme.components.card.primary, 'p-8')}>
                 <div className={cn(theme.components.icon.container, 'w-14 h-14 mb-6')}>
                   <Mail className={theme.components.icon.color} size={28} />
@@ -220,7 +208,7 @@ export default function Contact() {
                 >
                   yasir@buildnext.org
                 </a>
-              </div>
+              </div> */}
 
               <div className={cn(theme.components.card.primary, 'p-8')}>
                 <div className={cn(theme.components.icon.container, 'w-14 h-14 mb-6')}>

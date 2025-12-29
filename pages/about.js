@@ -3,6 +3,7 @@ import React from 'react';
 import { Target, Eye, Users, Zap, TrendingUp } from 'lucide-react';
 import { theme, cn } from '../styles/theme.js';
 import Link from 'next/link';
+import Navbar from '../components/Navbar';
 
 export default function About() {
   return (
@@ -15,23 +16,9 @@ export default function About() {
         <div className="absolute top-[10%] right-[-10%] w-[500px] h-[500px] rounded-full bg-cyan-400/25 blur-[140px]" />
         <div className="absolute bottom-[-25%] left-[25%] w-[700px] h-[700px] rounded-full bg-purple-500/20 blur-[160px]" />
       </div>
-      
-      {/* Navigation */}
-      <nav className={theme.components.nav.container}>
-        <div className={theme.spacing.container}>
-          <div className="py-4 flex justify-between items-center">
-            <Link href="/" className={cn('text-2xl font-bold cursor-pointer', theme.colors.text.primary)}>
-              BuildNext
-            </Link>
-            <div className="flex gap-8">
-              <a href="/" className={theme.components.nav.link}>Home</a>
-              <a href="/services" className={theme.components.nav.link}>Services</a>
-              <a href="/about" className={theme.components.nav.linkActive}>About</a>
-              <a href="/contact" className={theme.components.nav.link}>Contact</a>
-            </div>
-          </div>
-        </div>
-      </nav>
+
+      {/* ===== NAV ===== */}
+      <Navbar />
 
       {/* Hero Section */}
       <section className={theme.spacing.container}>
