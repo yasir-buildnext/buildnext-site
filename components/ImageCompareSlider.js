@@ -48,7 +48,7 @@ export default function ImageCompareSlider({
     <div className="w-full max-w-6xl mx-auto">
       <div
         ref={containerRef}
-        className="relative w-full aspect-[16/9] overflow-hidden rounded-2xl border border-slate-700 bg-black select-none"
+        className="relative w-full aspect-[3/2] overflow-hidden rounded-2xl border border-slate-700 bg-black select-none"
         onPointerDown={onPointerDown}
         onPointerMove={onPointerMove}
         onPointerUp={onPointerUp}

@@ -159,12 +159,21 @@ export default function Home() {
               ))}
             </motion.div>
 
+
+            <motion.h2
+              variants={fadeUp}
+              className={cn(theme.typography.h2, 'text-center mb-16')}
+            >
+              See what we can do for you...
+
+
             <div className="mt-12">
               <ImageCompareSlider
-                oldImage="https://images.unsplash.com/photo-1498050108023-c5249f4df085"
-                newImage="https://images.unsplash.com/photo-1555066931-4365d14bab8c"
+                oldImage="/images/new_image_0.png"
+                newImage="/images/old_image_3.png"
               />
             </div>
+            </motion.h2>
           </div>
         </section>
 
@@ -199,18 +208,18 @@ export default function Home() {
 
                   <p className="text-lg text-slate-200 leading-relaxed mb-8">
                     {i === 0
-                      ? '“BuildNext delivered our entire AI product end-to-end. Their speed, quality, and communication were unmatched.”'
-                      : '“We completely overhauled our website and internal tools with BuildNext. They feel like an extension of our own team.”'}
+                      ? '“We completely built our website and an AI model from the ground up and end-to-end with BuildNext. They felt like an extension of our own team.”'
+                      : '“BuildNext redesigned our entire website. They were very professional and their speed, quality, and communication were unmatched.”'}
                   </p>
 
                   <div className="flex items-center gap-4">
                     <div className={`w-12 h-12 rounded-full ${i === 0 ? 'bg-gradient-to-br from-cyan-400 to-blue-500' : 'bg-gradient-to-br from-pink-400 to-purple-500'}`} />
                     <div>
                       <div className="font-semibold text-white">
-                        {i === 0 ? 'Kevin Moore' : 'Minlopro Executive Team'}
+                        {i === 0 ? 'Kevin Moore' : 'Executive at Minlopro Partners'}
                       </div>
                       <div className="text-sm text-slate-400">
-                        {i === 0 ? 'Founder @ Angel Beta' : 'Technology Company'}
+                        {i === 0 ? 'Founder @ Founderport' : 'Salesforce Consulting Company'}
                       </div>
                     </div>
                   </div>
