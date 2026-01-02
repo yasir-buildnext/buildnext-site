@@ -158,9 +158,7 @@ export default function Contact() {
                     >
                       <option value="general" className={theme.colors.bg.secondary}>General Inquiry</option>
                       <option value="buildnext" className={theme.colors.bg.secondary}>BuildNext - Project Development</option>
-                      <option value="intern" className={theme.colors.bg.secondary}>BuildMore - Intern Tier</option>
-                      <option value="junior" className={theme.colors.bg.secondary}>BuildMore - Junior Dev Tier</option>
-                      <option value="senior" className={theme.colors.bg.secondary}>BuildMore - Senior Dev Tier</option>
+                      <option value="buildmore" className={theme.colors.bg.secondary}>BuildMore</option>
                     </select>
                   </div>
 
