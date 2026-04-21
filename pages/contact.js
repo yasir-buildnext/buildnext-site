@@ -4,6 +4,7 @@ import { Mail, MessageSquare, Send } from 'lucide-react';
 import { theme, cn } from '../styles/theme.js';
 import Link from 'next/link';
 import Navbar from '../components/Navbar';
+import TransparentLogo from '../components/TransparentLogo';
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -252,6 +253,14 @@ export default function Contact() {
                 </ul>
               </div>
             </div>
+          </div>
+
+          <div className="mt-12 flex justify-center">
+            <TransparentLogo
+              src="/images/buildnext-logo.png"
+              alt="BuildNext logo"
+              className="w-full max-w-md md:max-w-lg h-auto object-contain"
+            />
           </div>
         </div>
       </section>

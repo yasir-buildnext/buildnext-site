@@ -2,6 +2,7 @@ import { useState } from 'react';
 import Link from 'next/link';
 import { Menu, X } from 'lucide-react';
 import { theme, cn } from '../styles/theme';
+import TransparentLogo from './TransparentLogo';
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
@@ -17,35 +18,42 @@ export default function Navbar() {
     <nav className={cn(theme.components.nav.container, 'relative z-50')}>
       <div className={theme.spacing.container}>
         <div className="py-4 flex items-center justify-between">
-          {/* Logo */}
+          {/* Brand logo (top-left) */}
           <Link
             href="/"
-            className={cn('text-2xl font-bold', theme.colors.text.primary)}
+            aria-label="BuildNext Home"
           >
-            BuildNext
+            <TransparentLogo
+              src="/images/buildnext-logo.png"
+              alt="BuildNext logo"
+              className="h-10 md:h-12 w-auto object-contain"
+            />
           </Link>
 
-          {/* Desktop links */}
-          <div className="hidden md:flex gap-8">
-            {links.map((l) => (
-              <Link
-                key={l.href}
-                href={l.href}
-                className={theme.components.nav.link}
-              >
-                {l.label}
-              </Link>
-            ))}
-          </div>
+          <div className="flex items-center gap-4">
+            {/* Desktop links */}
+            <div className="hidden md:flex gap-8">
+              {links.map((l) => (
+                <Link
+                  key={l.href}
+                  href={l.href}
+                  className={theme.components.nav.link}
+                >
+                  {l.label}
+                </Link>
+              ))}
+            </div>
 
-          {/* Mobile toggle */}
-          <button
-            onClick={() => setOpen(!open)}
-            className="md:hidden text-white"
-            aria-label="Toggle menu"
-          >
-            {open ? <X size={24} /> : <Menu size={24} />}
-          </button>
+            {/* Mobile toggle */}
+            <button
+              onClick={() => setOpen(!open)}
+              className="md:hidden text-white"
+              aria-label="Toggle menu"
+            >
+              {open ? <X size={24} /> : <Menu size={24} />}
+            </button>
+
+          </div>
         </div>
       </div>
 
